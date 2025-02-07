@@ -21,9 +21,7 @@ class CorrelationIdExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('correlation_id.request_header_name', $config['response_header_name']);
-        $container->setParameter('correlation_id.response_header_name', $config['response_header_name']);
-        $container->setParameter('correlation_id.pass_through', $config['pass_through']);
+        $container->setParameter('correlation_id.header_name', $config['header_name']);
 
         $yamlLoader = new Loader\YamlFileLoader(
             $container,

@@ -1,3 +1,2 @@
 correlation_id:
-    response_header_name: 'X-Correlation-ID'
-    request_header_name: 'X-Correlation-ID'
+    header_name: 'X-Correlation-ID'

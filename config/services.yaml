@@ -1,9 +1,21 @@
 services:
     ComCompany\CorrelationIdBundle\EventSubscriber\CorrelationIdSubscriber:
         arguments:
-            $config:
-                response_header_name: '%correlation_id.response_header_name%'
-                request_header_name: '%correlation_id.request_header_name%'
-                pass_through: '%correlation_id.pass_through%'
+            $headerName: '%correlation_id.header_name%'
         tags:
             - { name: 'kernel.event_subscriber' }
+
+    ComCompany\CorrelationIdBundle\Logger\CorrelationIdProcessor:
+        arguments:
+            $requestStack: '@request_stack'
+            $headerName: '%correlation_id.header_name%'
+        tags:
+            - { name: monolog.processor }
+
+    ComCompany\CorrelationIdBundle\Http\CorrelationIdHttpClient:
+        decorates: 'http_client.transport'
+        decoration_priority: 10
+        arguments:
+            $decoratedHttpClient: '@ComCompany\CorrelationIdBundle\Http\CorrelationIdHttpClient.inner'
+            $requestStack: '@request_stack'
+            $headerName: '%correlation_id.header_name%'

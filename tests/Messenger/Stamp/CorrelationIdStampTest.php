@@ -7,9 +7,6 @@ namespace ComCompany\CorrelationIdBundle\Tests\Messenger\Stamp;
 use ComCompany\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
 use PHPUnit\Framework\TestCase;
 
-/**
- *
- */
 class CorrelationIdStampTest extends TestCase
 {
     public function testGetCorrelationId(): void

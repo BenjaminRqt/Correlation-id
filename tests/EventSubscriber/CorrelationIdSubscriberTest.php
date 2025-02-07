@@ -5,18 +5,14 @@ declare(strict_types=1);
 namespace ComCompany\CorrelationIdBundle\Tests\EventSubscriber;
 
 use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
-use PHPUnit\Framework\TestCase;
 use ComCompany\CorrelationIdBundle\EventSubscriber\CorrelationIdSubscriber;
-use ReflectionClass;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-/**
- *
- */
 class CorrelationIdSubscriberTest extends TestCase
 {
     private const CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
@@ -42,9 +38,7 @@ class CorrelationIdSubscriberTest extends TestCase
             null
         );
 
-        $subscriber = new CorrelationIdSubscriber([
-            'request_header_name' => 'CID-IN',
-        ]);
+        $subscriber = new CorrelationIdSubscriber('CID-IN');
         $subscriber->onKernelRequest($requestEvent);
 
         $this->assertNotEmpty($request->attributes->get('CID-IN'));
@@ -62,7 +56,7 @@ class CorrelationIdSubscriberTest extends TestCase
             null
         );
 
-        $subscriber = new CorrelationIdSubscriber();
+        $subscriber = new CorrelationIdSubscriber('X-Correlation-ID');
         $subscriber->onKernelRequest($requestEvent);
 
         $this->assertNotEmpty($request->attributes->get('X-Correlation-ID'));
@@ -80,7 +74,7 @@ class CorrelationIdSubscriberTest extends TestCase
             $response
         );
 
-        $subscriber = new CorrelationIdSubscriber();
+        $subscriber = new CorrelationIdSubscriber('X-Correlation-ID');
         $subscriber->onKernelResponse($responseEvent);
 
         $this->assertNotEmpty($response->headers->get('X-Correlation-ID'));
@@ -97,9 +91,7 @@ class CorrelationIdSubscriberTest extends TestCase
             $response
         );
 
-        $subscriber = new CorrelationIdSubscriber([
-            'response_header_name' => 'CID-OUT',
-        ]);
+        $subscriber = new CorrelationIdSubscriber('CID-OUT');
         $subscriber->onKernelResponse($responseEvent);
 
         $this->assertNotEmpty($response->headers->get('CID-OUT'));

@@ -16,15 +16,9 @@ class Configuration implements ConfigurationInterface
         /* @phpstan-ignore-next-line */
         $treeBuilder->getRootNode()
             ->children()
-                ->booleanNode('pass_through')
-                    ->defaultValue(false)
-                ->end()
-                ->scalarNode('response_header_name')
-                    ->defaultValue('X-Correlation-ID')
-                ->end()
-                ->scalarNode('request_header_name')
-                    ->defaultValue('X-Correlation-ID')
-                ->end()
+            ->scalarNode('header_name')
+            ->defaultValue('X-Correlation-ID')
+            ->end()
             ->end();
 
         return $treeBuilder;

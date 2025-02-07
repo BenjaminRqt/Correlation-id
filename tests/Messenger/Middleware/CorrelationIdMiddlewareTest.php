@@ -11,9 +11,6 @@ use stdClass;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\StackMiddleware;
 
-/**
- *
- */
 class CorrelationIdMiddlewareTest extends TestCase
 {
     public function testHandle(): void
