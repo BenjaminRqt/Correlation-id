@@ -1,0 +1,17 @@
+services:
+  correlationId:
+    container_name: correlationId
+    restart: always
+    image: correlation-id
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    working_dir: /var/www/html/
+    networks:
+      - backend
+    volumes:
+      - ./:/var/www/html
+
+networks:
+  backend:
+    external: true
