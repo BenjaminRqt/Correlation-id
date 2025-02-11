@@ -1,9 +1,16 @@
 #!make
+install:
+	@docker compose -f docker-compose.yml build
+	@docker exec -it correlationId sh -c "composer install"
+
 build:
 	@docker compose -f docker-compose.yml build
 
 up:
 	@docker compose -f docker-compose.yml up --force-recreate -d
+
+down:
+	@docker compose -f docker-compose.yml down
 
 bash:
 	@docker exec -it correlationId bash

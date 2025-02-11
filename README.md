@@ -1,8 +1,8 @@
 # Correlation ID
 
-![PHP >= 8.1](https://img.shields.io/static/v1?label=PHP&message=^8.1&color=787CB5&style=for-the-badge&logo=php)
+![PHP >= 8.3](https://img.shields.io/static/v1?label=PHP&message=^8.3&color=787CB5&style=for-the-badge&logo=php)
+![Symfony >= 6.0](https://img.shields.io/static/v1?label=symfony&message=%5E6.0&color=787CB5&style=for-the-badge&logo=symfony)
 ![phpstan Level 8](https://img.shields.io/static/v1?label=phpstan&message=Level%208&color=%3CCOLOR%3E&style=for-the-badge)
-[![Code Quality](https://img.shields.io/scrutinizer/g/Phauthentic/correlation-id-symfony-bundle/master.svg?style=for-the-badge)](https://scrutinizer-ci.com/g/Phauthentic/correlation-id-symfony-bundle/)
 
 ## Fonctionnalités
 

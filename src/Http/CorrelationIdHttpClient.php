@@ -20,7 +20,7 @@ class CorrelationIdHttpClient implements HttpClientInterface
     }
 
     /**
-     * @param array<mixed> $options
+     * @param array{headers?: array<string, string>} $options
      */
     public function request(string $method, string $url, array $options = []): ResponseInterface
     {
