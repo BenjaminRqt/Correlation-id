@@ -1,5 +1,5 @@
 {
-    "name": "com-company/correlation-id",
+    "name": "benjamin-rqt/correlation-id",
     "type": "library",
     "require": {
         "php": ">=8.3",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ComCompany\\CorrelationIdBundle\\": "src/"
+            "BenjaminRqt\\CorrelationIdBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ComCompany\\CorrelationIdBundle\\Tests\\": "tests/"
+            "BenjaminRqt\\CorrelationIdBundle\\Tests\\": "tests/"
         }
     },
     "config": {

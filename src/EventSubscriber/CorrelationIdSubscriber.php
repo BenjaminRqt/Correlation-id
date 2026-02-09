@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\EventSubscriber;
+namespace BenjaminRqt\CorrelationIdBundle\EventSubscriber;
 
-use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
+use BenjaminRqt\CorrelationIdBundle\Data\ValueObject\CorrelationId;
 use Exception;
 use InvalidArgumentException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

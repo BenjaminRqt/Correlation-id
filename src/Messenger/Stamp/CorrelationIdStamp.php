@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Messenger\Stamp;
+namespace BenjaminRqt\CorrelationIdBundle\Messenger\Stamp;
 
 use Symfony\Component\Messenger\Stamp\StampInterface;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Http;
+namespace BenjaminRqt\CorrelationIdBundle\Http;
 
-use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
+use BenjaminRqt\CorrelationIdBundle\Data\ValueObject\CorrelationId;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\HttpClient\ResponseInterface;

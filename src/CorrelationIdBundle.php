@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle;
+namespace BenjaminRqt\CorrelationIdBundle;
 
-use ComCompany\CorrelationIdBundle\DependencyInjection\CorrelationIdExtension;
+use BenjaminRqt\CorrelationIdBundle\DependencyInjection\CorrelationIdExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 

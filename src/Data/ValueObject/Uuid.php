@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Data\ValueObject;
+namespace BenjaminRqt\CorrelationIdBundle\Data\ValueObject;
 
 use Symfony\Component\Uid\Uuid as SymfonyUuid;
 

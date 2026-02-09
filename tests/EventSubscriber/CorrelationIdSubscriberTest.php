@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Tests\EventSubscriber;
+namespace BenjaminRqt\CorrelationIdBundle\Tests\EventSubscriber;
 
-use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
-use ComCompany\CorrelationIdBundle\EventSubscriber\CorrelationIdSubscriber;
+use BenjaminRqt\CorrelationIdBundle\Data\ValueObject\CorrelationId;
+use BenjaminRqt\CorrelationIdBundle\EventSubscriber\CorrelationIdSubscriber;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

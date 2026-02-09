@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Tests\Messenger\Stamp;
+namespace BenjaminRqt\CorrelationIdBundle\Tests\Messenger\Stamp;
 
-use ComCompany\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
+use BenjaminRqt\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
 use PHPUnit\Framework\TestCase;
 
 class CorrelationIdStampTest extends TestCase

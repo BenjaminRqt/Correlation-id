@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="ComCompany">
+<ruleset name="BenjaminRqt">
     <arg name="tab-width" value="4"/>
     <rule ref="PSR12">
         <exclude name="Generic.Files.LineLength.TooLong"/>

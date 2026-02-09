@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Messenger\Middleware;
+namespace BenjaminRqt\CorrelationIdBundle\Messenger\Middleware;
 
-use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
-use ComCompany\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
+use BenjaminRqt\CorrelationIdBundle\Data\ValueObject\CorrelationId;
+use BenjaminRqt\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
 use Symfony\Component\Messenger\Middleware\StackInterface;

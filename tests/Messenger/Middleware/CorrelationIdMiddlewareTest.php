@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Tests\Messenger\Middleware;
+namespace BenjaminRqt\CorrelationIdBundle\Tests\Messenger\Middleware;
 
-use ComCompany\CorrelationIdBundle\Messenger\Middleware\CorrelationIdMiddleware;
-use ComCompany\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
+use BenjaminRqt\CorrelationIdBundle\Messenger\Middleware\CorrelationIdMiddleware;
+use BenjaminRqt\CorrelationIdBundle\Messenger\Stamp\CorrelationIdStamp;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use Symfony\Component\Messenger\Envelope;

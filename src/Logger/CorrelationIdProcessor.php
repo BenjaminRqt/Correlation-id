@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace ComCompany\CorrelationIdBundle\Logger;
+namespace BenjaminRqt\CorrelationIdBundle\Logger;
 
-use ComCompany\CorrelationIdBundle\Data\ValueObject\CorrelationId;
+use BenjaminRqt\CorrelationIdBundle\Data\ValueObject\CorrelationId;
 use Monolog\LogRecord;
 use Monolog\Processor\ProcessorInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
