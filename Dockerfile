@@ -1,4 +1,4 @@
-FROM registry.valority.intra/commun/php:8.3-apache-bookworm as correlation-id
+FROM php:8.3-apache-bookworm as correlation-id
 
 RUN apt-get update && apt-get install -y zlib1g-dev libzip-dev zip unzip git
 
