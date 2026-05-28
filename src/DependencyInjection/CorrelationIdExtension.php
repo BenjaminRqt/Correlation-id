@@ -23,11 +23,13 @@ class CorrelationIdExtension extends Extension
 
         $container->setParameter('correlation_id.header_name', $config['header_name']);
 
-        $yamlLoader = new Loader\YamlFileLoader(
-            $container,
-            new FileLocator(__DIR__ . '/../../config')
-        );
+        if (class_exists(\Symfony\Component\Yaml\Yaml::class)) {
+            $yamlLoader = new Loader\YamlFileLoader(
+                $container,
+                new FileLocator(__DIR__ . '/../../config')
+            );
 
-        $yamlLoader->load('services.yaml');
+            $yamlLoader->load('services.yaml');
+        }
     }
 }

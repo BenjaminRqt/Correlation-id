@@ -13,7 +13,6 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder('correlation_id');
 
-        /* @phpstan-ignore-next-line */
         $treeBuilder->getRootNode()
             ->children()
             ->scalarNode('header_name')
