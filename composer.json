@@ -5,7 +5,7 @@
         "php": ">=8.3",
         "symfony/http-client": "^7.0||^8.0",
         "symfony/http-kernel": "^6.0||^7.0||^8.0",
-        "symfony/monolog-bundle": "^3.10",
+        "symfony/monolog-bundle": "^4.0",
         "symfony/uid": "^7.0||^8.0"
     },
     "require-dev": {
