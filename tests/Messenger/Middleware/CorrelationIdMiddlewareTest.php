@@ -14,14 +14,13 @@ use Symfony\Component\Messenger\Middleware\StackMiddleware;
 
 class CorrelationIdMiddlewareTest extends TestCase
 {
-    private const CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
+    private const string CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
 
     protected function tearDown(): void
     {
         CorrelationId::setNextGeneratedId(null);
         $reflection = new \ReflectionClass(\BenjaminRqt\CorrelationIdBundle\Data\ValueObject\Uuid::class);
         $property = $reflection->getProperty('generatedInstance');
-        $property->setAccessible(true);
         $property->setValue(null, null);
 
         parent::tearDown();

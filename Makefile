@@ -33,7 +33,7 @@ phpcbf:
 fix: phpcsfixer phpcbf
 
 test:
-	@docker exec -it correlationId sh -c "php bin/phpunit"
+	@docker exec -it correlationId sh -c "php ./vendor/bin/phpunit"
 
 qa: phpcsfixer-dry phpstan phpcs test
 

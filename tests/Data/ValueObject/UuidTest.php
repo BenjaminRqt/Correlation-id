@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class UuidTest extends TestCase
 {
-    private const UUID_STRING = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
+    private const string UUID_STRING = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
 
     protected function tearDown(): void
     {
@@ -18,7 +18,6 @@ class UuidTest extends TestCase
         // Reset generatedInstance using reflection since it's private and static
         $reflection = new \ReflectionClass(Uuid::class);
         $property = $reflection->getProperty('generatedInstance');
-        $property->setAccessible(true);
         $property->setValue(null, null);
 
         parent::tearDown();

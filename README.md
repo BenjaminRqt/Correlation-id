@@ -1,7 +1,7 @@
 # Correlation ID
 
-![PHP >= 8.3](https://img.shields.io/static/v1?label=PHP&message=%5E8.3&color=787CB5&style=for-the-badge&logo=php)
-![Symfony >= 6.0](https://img.shields.io/static/v1?label=Symfony&message=%5E6.0&color=787CB5&style=for-the-badge&logo=symfony)
+![PHP >= 8.3](https://img.shields.io/static/v1?label=PHP&message=8.3+-+8.5&color=787CB5&style=for-the-badge&logo=php)
+![Symfony >= 6.0](https://img.shields.io/static/v1?label=Symfony&message=6.0+-+8.0&color=787CB5&style=for-the-badge&logo=symfony)
 ![phpstan Level 8](https://img.shields.io/static/v1?label=phpstan&message=Level%208&color=4CAF50&style=for-the-badge)
 
 A Symfony bundle that provides an easy way to manage a **Correlation ID** across your application.

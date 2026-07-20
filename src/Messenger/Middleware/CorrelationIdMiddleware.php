@@ -13,8 +13,6 @@ use Symfony\Component\Messenger\Middleware\StackInterface;
 class CorrelationIdMiddleware implements MiddlewareInterface
 {
     /**
-     * @SuppressWarnings(PHPMD.StaticAccess)
-     *
      * @throws \Exception
      */
     public function handle(Envelope $envelope, StackInterface $stack): Envelope

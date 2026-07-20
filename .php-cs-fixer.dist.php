@@ -74,7 +74,7 @@ return (new PhpCsFixer\Config())
         'trim_array_spaces' => true,
         'whitespace_after_comma_in_array' => true,
         'trailing_comma_in_multiline' => true,
-        'visibility_required' => true,
+        'modifier_keywords' => true,
     ])
     ->setFinder($finder)
 ;
