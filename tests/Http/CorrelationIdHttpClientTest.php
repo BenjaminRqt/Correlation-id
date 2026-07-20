@@ -14,15 +14,14 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 class CorrelationIdHttpClientTest extends TestCase
 {
-    private const HEADER_NAME = 'X-Correlation-ID';
-    private const CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
+    private const string HEADER_NAME = 'X-Correlation-ID';
+    private const string CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
 
     protected function tearDown(): void
     {
         CorrelationId::setNextGeneratedId(null);
         $reflection = new \ReflectionClass(\BenjaminRqt\CorrelationIdBundle\Data\ValueObject\Uuid::class);
         $property = $reflection->getProperty('generatedInstance');
-        $property->setAccessible(true);
         $property->setValue(null, null);
 
         parent::tearDown();
@@ -114,7 +113,6 @@ class CorrelationIdHttpClientTest extends TestCase
         // Use reflection to check if decoratedHttpClient is updated
         $reflection = new \ReflectionClass(CorrelationIdHttpClient::class);
         $property = $reflection->getProperty('decoratedHttpClient');
-        $property->setAccessible(true);
         $this->assertSame($mockHttpClientWithOptions, $property->getValue($newClient));
     }
 }

@@ -15,11 +15,8 @@ use Symfony\Component\HttpKernel\KernelEvents;
 
 class CorrelationIdSubscriberTest extends TestCase
 {
-    private const CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
+    private const string CORRELATION_ID = 'd8d089ec-72c8-44c1-a0bf-1906e5fc3524';
 
-    /**
-     * @SuppressWarnings(PHPMD.StaticAccess)
-     */
     public function setUp(): void
     {
         CorrelationId::setNextGeneratedId(self::CORRELATION_ID);
@@ -97,14 +94,10 @@ class CorrelationIdSubscriberTest extends TestCase
         $this->assertNotEmpty($response->headers->get('CID-OUT'));
     }
 
-    /**
-     * @SuppressWarnings(PHPMD.StaticAccess)
-     */
     public function testGetSubscribedEvents(): void
     {
         $subscribedEvents = CorrelationIdSubscriber::getSubscribedEvents();
 
-        $this->assertIsArray($subscribedEvents);
         $this->assertArrayHasKey(KernelEvents::REQUEST, $subscribedEvents);
         $this->assertSame(['onKernelRequest', 255], $subscribedEvents[KernelEvents::REQUEST]);
         $this->assertArrayHasKey(KernelEvents::RESPONSE, $subscribedEvents);

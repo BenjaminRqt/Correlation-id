@@ -18,9 +18,6 @@ class CorrelationIdSubscriber implements EventSubscriberInterface
     {
     }
 
-    /**
-     * @SuppressWarnings(PHPMD.StaticAccess)
-     */
     public function onKernelRequest(RequestEvent $event): void
     {
         if ($event->getRequest()->headers->has($this->headerName)) {
@@ -36,8 +33,6 @@ class CorrelationIdSubscriber implements EventSubscriberInterface
     }
 
     /**
-     * @SuppressWarnings(PHPMD.StaticAccess)
-     *
      * @throws InvalidArgumentException
      * @throws Exception
      */
