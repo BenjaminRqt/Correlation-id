@@ -15,6 +15,7 @@ A Symfony bundle that provides an easy way to manage a **Correlation ID** across
 - Exposes the Correlation ID in the response headers
 - Automatically reuses the Correlation ID from incoming requests when present
 - Generates a new Correlation ID when none is provided
+- Automatically sends the Correlation ID to **Sentry** as a tag on exceptions (if Sentry SDK is installed)
 
 ---
 
@@ -71,3 +72,17 @@ This ensures that:
 
 * The Correlation ID from the HTTP request is propagated to Messenger messages
 * The same Correlation ID is available when handling messages asynchronously
+
+---
+
+## Sentry Integration
+
+If you have the [Sentry PHP SDK](https://github.com/getsentry/sentry-php) installed, the Sentry integration is **automatically enabled** — no configuration required.
+
+### Requirements
+
+* `sentry/sentry` (or `sentry/sentry-symfony`) must be installed.
+
+The bundle automatically detects the Sentry SDK and listens to kernel exceptions to call `\Sentry\configureScope()`, setting the `correlation_id` tag on the current Sentry scope.
+
+This allows you to filter and search Sentry issues by Correlation ID, making it easy to trace errors back to a specific request.
